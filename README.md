@@ -4,4 +4,4 @@ This repository is home base for the "Give or take a few representations", one o
 
 The main goal of this project is to examine how large language models represent light-verb constructions (LVCs). More information about this project -- both in this README file and elsewhere in this repository -- will be updated over the following few weeks. cd
 
-The current dataset for this project is a Frankensteinien amalgamation of the datasets constructed by Yuancheng Tu and Dan Roth for their 2011 paper ["Learning English Light Verb Constructions: Contextual or Statistical"](https://cogcomp.seas.upenn.edu/page/publication_view/662) and their 2012 paper [Sorting Out the Most Confusing English Phrasal Verbs](https://cogcomp.seas.upenn.edu/page/publication_view/689). Major thanks to them for building easy-to-use datasets.
+The current dataset for this project is a Frankensteinien amalgamation of the dataset constructed by Yuancheng Tu and Dan Roth for their 2012 paper ["Sorting Out the Most Confusing English Phrasal Verbs"](https://cogcomp.seas.upenn.edu/page/publication_view/689). Major thanks to them for building easy-to-use datasets!
