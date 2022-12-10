@@ -23,7 +23,11 @@ def generate_representations(words: list, contexts: list,
     batch_ranges = list(range(0, len(words), batch_size))
     batch_ranges.append(len(words))
     pairs = np.array(list(zip(contexts, words)))
-    vectors = []
+    
+    if type(layer) != int:
+        vectors = [[] for i in range(len(layer))]
+    else:
+        vectors = []
 
     for i in range(1, len(batch_ranges)):
         ix_range = (batch_ranges[i-1], batch_ranges[i])
@@ -33,12 +37,13 @@ def generate_representations(words: list, contexts: list,
         if type(layer)!=int:
             reps = model.extract_representation(pairs[ix_range[0]: ix_range[1]], layer=layer)
             reps = np.array([layer_reps.numpy() for layer_reps in reps])
-
+            for i in range(len(reps)):
+                vectors[i].extend(reps[i])
+                
         # Single layer
         else:
             reps = model.extract_representation(pairs[ix_range[0]: ix_range[1]], layer=layer).numpy()
-        
-        vectors.extend(reps)
+            vectors.extend(reps)
     print('Run complete.')
     print()
     return np.array(vectors), np.array(pairs)
