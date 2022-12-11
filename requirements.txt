@@ -2,3 +2,4 @@ python=3.10
 pandas
 numpy
 minicons
+sklearn
