@@ -23,7 +23,6 @@ def generate_representations(words: list, contexts: list,
     batch_ranges = list(range(0, len(words), batch_size))
     batch_ranges.append(len(words))
     pairs = np.array(list(zip(contexts, words)))
-    
     if type(layer) != int:
         vectors = [[] for i in range(len(layer))]
     else:
